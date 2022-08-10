@@ -2,60 +2,71 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oil Consumption Calculator</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-
   <div class="app">
-
     <header>
       <h1>Fuel Consumption Calculator</h1>
     </header>
 
     <div class="inputs">
-
       <form action="get" method="get" onsubmit="return false">
         <label for="currency">Currency</label>
-        <select id="currency" name="currency">
-          <option value="uah">₴UAH</option>
-          <option value="usd">$USD</option>
-          <option value="eur">€EUR</option>
+        <select id="currency" name="currency" class="input-field dropdown">
+          <option value="uah" style="
+                font-family: Arial;
+                padding: 0.25rem 0;
+                padding-left: 1.25rem;
+              ">
+            UAH
+          </option>
+          <option value="usd" style="
+                font-family: Arial;
+                padding: 0.25rem 0;
+                padding-left: 1.25rem;
+              ">
+            USD
+          </option>
+          <option value="eur" style="
+                font-family: Arial;
+                padding: 0.25rem 0;
+                padding-left: 1.25rem;
+              ">
+            EUR
+          </option>
         </select>
         <label for="distance">Distance</label>
-        <input type="number" id="distance" name="distance" placeholder="Km">
-        <label for="average">Average fuel consumption</label>
-        <input type="number" id="average" name="average" placeholder="Liters/100km" min="0" max="199" step="0.1">
+        <input type="number" id="distance" name="distance" placeholder="Km" class="input-field input-dist" />
+        <label for="average" class="labels average-label">Average fuel consumption</label>
+        <input type="number" id="average" name="average" placeholder="Liters/100km" min="0" max="50" step="0.1"
+          class="input-field input-average" />
         <label for="cost">Cost of 1L of fuel</label>
-        <input type="number" id="cost" name="cost" placeholder="$/L">
-        <input type="button" value="Calculate" class="button" id="button">
+        <input type="number" id="cost" name="cost" placeholder="₴/L" class="input-field input-cost" />
+        <input type="button" value="Calculate" class="button" id="button" />
       </form>
 
       <div class="results">
-
         <div class="tripcostbox">
           <h2 class="tripcost-heading">Trip will cost</h2>
-          <h3 id="tripcost"> 0</h3>
+          <h3 id="tripcost">0</h3>
         </div>
 
         <div class="fuelcostbox">
           <h2 class="fuelcost-heading">Fuel needed</h2>
-          <h4 id="fuelcost"> 0</h4>
+          <h4 id="fuelcost">0</h4>
         </div>
-
       </div>
-
     </div>
-
   </div>
-  <!-- <script src="./fuelcalc.js"></script> -->
-  <script src="/script.js"></script>
 
+  <script src="/script.js"></script>
 </body>
 
 </html>

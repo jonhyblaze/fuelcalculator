@@ -5,8 +5,12 @@
 body {
   font-size: 1rem;
   font-family: 'Iter', sans-serif;
-  background-color: #1F2326;
-  color: white
+  background-color: #1f2326;
+  color: white;
+}
+
+* {
+  font-family: 'Iter', sans-serif;
 }
 
 /* *Typography */
@@ -14,35 +18,61 @@ body {
 h1 {
   font-weight: 900;
   font-size: 3rem;
-  line-height: 3.75rem
+  line-height: 3.75rem;
+}
+
+input {
+  font-family: 'Iter', sans-serif;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #fff;
+}
+
+select,
+option {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #fff;
 }
 
 label {
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 100;
-  color: #6B6D75
+  color: #9a9ca7;
+}
+
+.average-label {
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 2rem;
 }
 
 h2 {
   font-weight: 200;
   font-size: 0.875rem;
   line-height: 1.5rem;
-  color: #6B6D75
+  color: #9a9ca7;
 }
 
 h3 {
   font-size: 5rem;
   font-weight: 700;
   line-height: 5rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 h4 {
   font-size: 1.35rem;
   font-weight: 400;
   line-height: 2rem;
-  letter-spacing: .08rem;
+  letter-spacing: 0.08rem;
 }
 
 .button {
@@ -50,13 +80,14 @@ h4 {
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 2.15rem;
-  background-color: #E95636;
-  border: 1px solid #E95636;
+  background-color: #e95636;
+  border: 1px solid #e95636;
   border-radius: 6px;
-  padding: .1rem 1.25rem;
+  padding: 0.1rem 1.25rem;
   margin-top: 1.25rem;
   transition: 0.45s ease;
   font-family: 'Inter';
+  text-align: center;
 }
 
 .button:hover {
@@ -73,7 +104,6 @@ h4 {
   justify-content: space-around;
   align-items: center;
   margin-top: 5rem;
-
 }
 
 .inputs {
@@ -86,22 +116,65 @@ h4 {
 form {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
-  gap: .3rem;
-  background: #292D31;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  background: #292d31;
   border-radius: 16px;
   padding: 3rem;
-  width: 13rem;
+  width: 16rem;
 }
 
 .results {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: 0.75rem;
   padding: 0 2rem;
   width: 20rem;
 }
 
 header {
   display: flex;
+}
+
+/* * Styling the form */
+
+input {}
+
+/* ? Killing Chrome, Safari, Edge, Opera input arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ? Same input arrow kill for Firefox */
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input-field {
+  background-color: #292d31;
+  color: white;
+  border: 1px solid #6d6d75;
+  border-radius: 5px;
+  padding: 0.25rem 0;
+  padding-left: 1.25rem;
+  padding-right: 0.5rem;
+}
+
+.input-field:focus {
+  border: 1px solid white;
+}
+
+.dropdown {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+option {
+  padding: 0.25rem 0;
+  padding-left: 1.25rem;
 }

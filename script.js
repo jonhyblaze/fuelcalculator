@@ -1,5 +1,4 @@
-function fuelCalculator () {
-  
+function fuelCalculator() {
   // * Selecting elements from DOM
   const distance = +document.getElementById('distance').value
   const averageConsumption = +document.getElementById('average').value
@@ -9,28 +8,27 @@ function fuelCalculator () {
   const currency = document.getElementById('currency')
 
   // * Math logic
-  const fuelPerKm =  +(averageConsumption / 100).toFixed(3)
+  const fuelPerKm = +(averageConsumption / 100).toFixed(3)
   const totalFuel = +(fuelPerKm * distance).toFixed(2)
   const tripCost = +(totalFuel * costOfLiter).toFixed(2)
 
   // ? This is way to select active option on dropdown list   (currency.options[currency.selectedIndex].value)
 
-  function currencyVario () {
-      if (currency.options[currency.selectedIndex].value === 'uah') return '₴'
-      if (currency.options[currency.selectedIndex].value === 'usd') return '$'
-      if (currency.options[currency.selectedIndex].value === 'eur') return '€'
-    }
+  function currencyVario() {
+    if (currency.options[currency.selectedIndex].value === 'uah') return '₴'
+    if (currency.options[currency.selectedIndex].value === 'usd') return '$'
+    if (currency.options[currency.selectedIndex].value === 'eur') return '€'
+  }
 
-    // * Updating HTML with all the math calculations
+  // * Updating HTML with all the math calculations
 
-      resultCost.value = `${currencyVario()}${tripCost}` 
-      resultFuel.value = `${totalFuel}L`
-      resultCost.innerHTML = resultCost.value
-      resultFuel.innerHTML = resultFuel.value
+  resultCost.value = `${currencyVario()}${tripCost}`
+  resultFuel.value = `${totalFuel}L`
+  resultCost.innerHTML = resultCost.value
+  resultFuel.innerHTML = resultFuel.value
 }
 
-
-// * Selecting event target element from DOM: 
+// * Selecting event target element from DOM:
 
 const button = document.querySelector('#button')
 
@@ -38,3 +36,20 @@ const button = document.querySelector('#button')
 
 button.addEventListener('click', fuelCalculator)
 
+// ? Event handler function to update placeholder value, due to selected currency
+
+function placeholderCurrSwitcher() {
+  const costInput = document.getElementById('cost')
+  if (currency.options[currency.selectedIndex].value === 'uah')
+    costInput.placeholder = '₴/L'
+  if (currency.options[currency.selectedIndex].value === 'usd')
+    costInput.placeholder = '$/L'
+  if (currency.options[currency.selectedIndex].value === 'eur')
+    costInput.placeholder = '€/L'
+}
+
+// * Adding event listener
+
+currency.onchange = placeholderCurrSwitcher
+
+const inputDistance = document.getElementById('distance')

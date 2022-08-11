@@ -52,4 +52,4 @@ function placeholderCurrSwitcher() {
 
 currency.onchange = placeholderCurrSwitcher
 
-const inputDistance = document.getElementById('distance')
+

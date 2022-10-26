@@ -166,8 +166,8 @@ input[type='number'] {
   border: .5px solid #6d6d75;
   border-radius: 5px;
   padding: 0.25rem 0;
-  padding-left: 1.25rem;
-  padding-right: 0.5rem;
+  padding-left: .5rem;
+  padding-right: 0;
   transition: .35s ease;
 }
 
@@ -192,7 +192,7 @@ select {
 }
 
 option {
-  padding-left: 1.25rem;
+  padding-left: .25rem;
   border-radius: 10px;
 }
 
@@ -228,6 +228,7 @@ option {
     margin-left: 0;
     justify-content: center;
     align-items: center;
+    gap: 2rem
 
   }
 
@@ -288,7 +289,7 @@ option {
     justify-content: flex-start;
     align-items: center;
     margin-top: 2rem;
-    gap: 1rem;
+    gap: 2rem
   }
 
   .dropdown {
@@ -317,7 +318,9 @@ option {
   .fuelcostbox {
     margin-left: .75rem;
   }
-
+.app {
+  gap: 2rem
+}
 
 }
 

@@ -1,3 +1,13 @@
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker.register("service-worker.js").then(registration => {
+//     console.log("SW registered")
+//     console.log(registration)
+//   }).catch(error => {
+//     console.log("SW registration failed!")
+//     console.log(error)
+//   })
+// }
+
 function fuelCalculator() {
   // * Selecting elements from DOM
   const distance = +document.getElementById('distance').value
@@ -51,5 +61,3 @@ function placeholderCurrSwitcher() {
 // * Adding event listener
 
 currency.onchange = placeholderCurrSwitcher
-
-

@@ -1,0 +1,23 @@
+{
+  "name" : "Fuel Calculator",
+  "short_name" : "Fuel Calculator",
+  "start_url" : "/?home=true",
+  "background_color": "#1F2326",
+  "theme_color": "#2A2E32",
+  "display" : "standalone",
+  "orientation" : "portrait",
+  "icons": [
+    {
+      "src": "img/logo192.png",
+      "sizes": "192x192",
+      "type" : "image/png",
+      "purpose" : "maskable any"
+    },
+    {
+      "src": "img/logo512.png",
+      "sizes": "512x512",
+      "type" : "image/png",
+      "purpose" : "maskable any"
+    }
+  ]
+}

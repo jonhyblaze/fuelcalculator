@@ -3,7 +3,7 @@
   "short_name" : "Fuel Calculator",
   "start_url" : "/?home=true",
   "background_color": "#1F2326",
-  "theme_color": "#2A2E32",
+  "theme_color": "#1F2326",
   "display" : "standalone",
   "orientation" : "portrait",
   "icons": [

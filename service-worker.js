@@ -6,9 +6,7 @@ workbox.precaching.precacheAndRoute([
   {url: '/index.html', revision: '199203'},
   {url: '/style.css', revision: null},
   {url: '/reset.css', revision: null},
-  {url: '/script.js', revision: null},
-  {url: '/manifest.json', revision: null},
-  {url: '/img/favicon.ico', revision: null}
+  {url: '/script.js', revision: null}
 ]);
 
 

@@ -11,6 +11,8 @@ body {
   font-family: 'Iter', sans-serif;
   background-color: #1f2326;
   color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 * {

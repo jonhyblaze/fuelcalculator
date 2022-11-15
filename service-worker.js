@@ -3,7 +3,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox
 
 
 
-const urlToCache = ['/', 'index.html', 'manifest.json', 'reset.css', 'script.js', 'service-worker.js', 'style.css']
+const urlToCache = ['/index.html', '/manifest.json', '/reset.css', '/script.js', '/service-worker.js', '/style.css']
 
 caches.open('pwa-assets')
 .then(cache => {

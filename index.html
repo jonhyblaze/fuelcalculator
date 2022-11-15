@@ -11,6 +11,14 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  
+  <script> if('serviceWorker'in navigator) {
+    window.addEventListener ('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+    })
+  }
+  </script>
+
 </head>
 
 <body>
@@ -66,10 +74,7 @@
     </div>
   </div>
 
-  <script> if('serviceWorker'in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-  }
-  </script>
+
   <script src="script.js"></script>
 
 </body>
